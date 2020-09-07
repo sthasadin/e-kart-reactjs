@@ -24,7 +24,7 @@ function Header() {
       <div className="header__nav">
         {/* 1rst link */}
         <Link to="/login" className="header__link">
-          <div className="header_option">
+          <div className="header__option">
             <span>Hello Sadin</span>
             <span>SignIn</span>
           </div>
@@ -32,7 +32,7 @@ function Header() {
 
         {/* 2nd link */}
         <Link to="/" className="header__link">
-          <div className="header_option">
+          <div className="header__option">
             <span>Returns</span>
             <span>& Orders</span>
           </div>
@@ -40,7 +40,7 @@ function Header() {
 
         {/* 3rd link */}
         <Link to="/" className="header__link">
-          <div className="header_option">
+          <div className="header__option">
             <span>Your</span>
             <span>Prime</span>
           </div>
