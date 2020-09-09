@@ -1,6 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Header";
+import Home from "./Home";
+import Checkout from "./Checkout";
+import Login from "./Login";
 import "./App.css";
 
 function App() {
@@ -9,15 +12,16 @@ function App() {
       <div className="app">
         <Switch>
           <Route path="/checkout">
-            <h1>Checkout</h1>
+            <Header />
+            <Checkout />
           </Route>
           <Route path="/login">
-            <h1>Login Pages</h1>
+            <Login />
           </Route>
           {/* This is the Default Router */}
           <Route path="/">
             <Header />
-            <h1>HomePage</h1>
+            <Home />
           </Route>
         </Switch>
       </div>
