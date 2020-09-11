@@ -1,24 +1,5 @@
 export const initialState = {
-  basket: [
-    {
-      id: "12345",
-      title:
-        "The Lean Startup: How Constant Innovation Creates Radically Successful Businesses",
-      price: 800,
-      rating: 5,
-      image:
-        "https://m.media-amazon.com/images/I/81jgCiNJPUL._AC_UY327_FMwebp_QL65_.jpg",
-    },
-    {
-      id: "12657656hyf345",
-      title:
-        "The Lean Startup: How Constant Innovation Creates Radically Successful Businesses",
-      price: 800,
-      rating: 5,
-      image:
-        "https://m.media-amazon.com/images/I/81jgCiNJPUL._AC_UY327_FMwebp_QL65_.jpg",
-    },
-  ],
+  basket: [],
   user: null,
 };
 
@@ -52,6 +33,12 @@ const reducer = (state, action) => {
         );
       }
       return { ...state, basket: newBasket };
+
+    case "SET_USER":
+      return {
+        ...state,
+        user: action.user,
+      };
 
     default:
       return state;

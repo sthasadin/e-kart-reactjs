@@ -6,7 +6,7 @@ import CurrencyFormat from "react-currency-format";
 import "./Checkout.css";
 
 function Checkout() {
-  const [{ basket }] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
   return (
     <div className="checkout">
       <div className="checkout__left">
@@ -28,6 +28,7 @@ function Checkout() {
           </div>
         ) : (
           <div>
+            <h3>Hey, {user?.email}</h3>
             <h2 className="checkout__title">Your Shopping Cart.</h2>
 
             {/* List out all the products*/}
